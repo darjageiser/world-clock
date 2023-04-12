@@ -22,6 +22,30 @@ function updateTime() {
     bernDateElement.innerHTML = bernTime.format("MMMM Do YYYY");
     bernTimeElement.innerHTML = bernTime.format("h:mm:ss [<small>]A[</small>]");
   }
+  // Tokyo
+  let tokyoElement = document.querySelector("#tokyo");
+  if (tokyoElement) {
+    let tokyoDateElement = tokyoElement.querySelector(".date");
+    let tokyoTimeElement = tokyoElement.querySelector(".time");
+    let tokyoTime = moment().tz("Asia/Tokyo");
+
+    tokyoDateElement.innerHTML = tokyoTime.format("MMMM Do YYYY");
+    tokyoTimeElement.innerHTML = tokyoTime.format(
+      "h:mm:ss [<small>]A[</small>]"
+    );
+  }
+  // Dubai
+  let dubaiElement = document.querySelector("#dubai");
+  if (dubaiElement) {
+    let dubaiDateElement = dubaiElement.querySelector(".date");
+    let dubaiTimeElement = dubaiElement.querySelector(".time");
+    let dubaiTime = moment().tz("Asia/dubai");
+
+    dubaiDateElement.innerHTML = dubaiTime.format("MMMM Do YYYY");
+    dubaiTimeElement.innerHTML = dubaiTime.format(
+      "h:mm:ss [<small>]A[</small>]"
+    );
+  }
 }
 
 function updateCity(event) {
